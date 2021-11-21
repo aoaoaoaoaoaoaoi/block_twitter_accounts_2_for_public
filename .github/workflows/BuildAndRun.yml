@@ -1,0 +1,15 @@
+name: BuildAndRun
+
+on:
+  workflow_dispatch:
+
+jobs:
+  BuildAndRunJob:
+    runs-on: ubuntu-latest
+    container: docker://mcr.microsoft.com/dotnet/sdk:6.0-bullseye-slim
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: dotnet --version
+    - run: cd blockTwitterAccounts2
+    - run: dotnet run
