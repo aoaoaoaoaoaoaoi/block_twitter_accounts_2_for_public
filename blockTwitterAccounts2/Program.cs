@@ -27,7 +27,7 @@ namespace BlockTwitterAccouts
                 }
             }
             if(blockUserList.Any()){
-                var dmMessage = $"【自動ブロック機能】{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}\n以下のアカウントをブロックしました\n{string.Join( "\n@", blockUserList)}";
+                var dmMessage = $"【自動ブロック機能】{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")}\n以下のアカウントをブロックしました\n\n@{string.Join( "\n@", blockUserList)}";
                 var user = await userClient.Users.GetAuthenticatedUserAsync();
                 await userClient.Messages.PublishMessageAsync(dmMessage, user.Id);
             }
