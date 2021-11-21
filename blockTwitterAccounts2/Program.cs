@@ -13,8 +13,12 @@ namespace BlockTwitterAccouts
     {
         public static async Task Main(string[] args)
         {
+            var file = File.ReadAllText("./ngWordText/test.csv", Encoding.UTF8);
+            var ngWordList = file.Split(',');
             Console.WriteLine("**********************");
-            Console.WriteLine($"{args[0]}");
+            foreach(var ngWord in ngWordList){
+                Console.WriteLine(ngWord);
+            }
             Console.WriteLine("**********************");
         }
     }
