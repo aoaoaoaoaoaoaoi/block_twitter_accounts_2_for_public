@@ -13,6 +13,7 @@ jobs:
     - run: dotnet --version
     - run: pwd
     - run: ls
+    - run: cd blockTwitterAccounts2
+    - run: pwd
+    - run: ls    
     - run: dotnet run
-      with:
-        path: blockTwitterAccounts2
