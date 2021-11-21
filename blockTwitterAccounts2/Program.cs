@@ -13,8 +13,9 @@ namespace BlockTwitterAccouts
     {
         public static async Task Main(string[] args)
         {
+            var test = args[0];
             Console.WriteLine("**********************");
-            Console.WriteLine("Hi!! Success!!!!!!");
+            Console.WriteLine($"Hi!! Success!!!!!!");
             Console.WriteLine("**********************");
         }
     }
