@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: dotnet --version 
-    - run: cd blockTwitterAccounts2 && dotnet run -- ${TEST}
+    - run: cd blockTwitterAccounts2 && dotnet run -- ${API_KEY} ${API_KEY_SECRET} ${ACCESS_TOKEN} ${ACCESS_TOKEN_SECRET}
       env:
-        TEST: ${{ secrets.TEST }}
+        API_KEY: ${{ secrets.API_KEY }}        
+        API_KEY_SECRET: ${{ secrets.API_KEY_SECRET }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}        
+        ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
