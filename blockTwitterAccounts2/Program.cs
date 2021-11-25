@@ -62,7 +62,7 @@ namespace BlockTwitterAccouts
         }
 
         private static bool isNgByName(string listName){
-            var ngWordList = getCsvData("./ngWordText/list_name.csv", Encoding.UTF8);
+            var ngWordList = getCsvData("./ngWordText/list_name.csv");
             foreach(var ngWord in ngWordList){
                 if(listName.Contains(ngWord)){
                     return true;
@@ -72,7 +72,7 @@ namespace BlockTwitterAccouts
         } 
 
         private static bool isNgByUserDescription(string userDescription){
-            var ngWordList = getCsvData("./ngWordText/user_description.csv", Encoding.UTF8);
+            var ngWordList = getCsvData("./ngWordText/user_description.csv");
             foreach(var ngWord in ngWordList){
                 if(userDescription.Contains(ngWord)){
                     return true;
