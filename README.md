@@ -12,6 +12,7 @@ Register with Twitter Developer to receive tokens, etc.
 
 ## Usage
 1. Register token, etc. as follows
+
 | secret's name       | things to register  |
 | ------------------- | ------------------- |
 | ACCESS_TOKEN        | access token        |
